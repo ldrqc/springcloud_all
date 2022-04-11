@@ -1,0 +1,30 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: eurekaConsumer
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:7001/eureka/
+
+#配置文件制定负载策略 EUREKAPROVIDE为服务的名称
+EUREKAPROVIDE:
+  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
+    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule
+
+
+ribbon:
+  eureka:
+    enabled: false
+  listOfServers: localhost:8080
+
+
+
+
+
+
+
+

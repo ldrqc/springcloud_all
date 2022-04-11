@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: eurekaProvide
+eureka:
+  client:
+    service-url:
+#      服务端加安全认证以后
+#      defaultZone: http://tom:123456@peer1:7001/eureka/
+      defaultZone: http://peer1:7001/eureka/
+
+
+
+
+
+
+
+
+
+

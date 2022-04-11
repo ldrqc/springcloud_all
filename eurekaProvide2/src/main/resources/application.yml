@@ -1,0 +1,33 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: eurekaProvide
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:7001/eureka/
+    healthcheck:
+#      可以上报服务的真是健康状态
+      enabled: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    shutdown:
+#     可以远程通过POST的shutdown方法关闭服务
+      enabled: true
+
+
+
+
+
+
+
+
+
+
+
